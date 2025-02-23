@@ -12,21 +12,23 @@ The trained model and transformer are saved as `.pkl` files and used for making 
 
 ## Project Structure
 ```plaintext
-├── src
-│   ├── pipeline
-│   │   ├── data_ingestion.py
-│   │   ├── data_transformation.py
-│   │   ├── model_trainer.py
-│   │   ├── predict_pipeline.py
-│   ├── models
-│       ├── model.pkl
-│       ├── transformer.pkl
+├── __init__.py
+├── __pycache__
+├── artifacts
+├── logger.py
+├── pipeline
+├── components
+│   ├── __init__.py
+│   ├── data_ingestion.py
+│   ├── data_transformation.py
+│   ├── model_trainer.py
+│   ├── __pycache__
+├── logs
 ├── templates
-│   ├── index.html
-│   ├── home.html
 ├── app.py
-├── requirements.txt
-├── README.md
+├── exception.py
+├── notebook
+├── utils.py
 ```
 
 ## Features
@@ -46,7 +48,7 @@ The trained model and transformer are saved as `.pkl` files and used for making 
 ### 2. Create a virtual environment and activate it:
 ```sh
  python -m venv venv
- source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+ source venv/bin/activate  # On Windows use `venv\Scriptsctivate`
 ```
 
 ### 3. Install dependencies:
@@ -58,7 +60,7 @@ The trained model and transformer are saved as `.pkl` files and used for making 
 
 ### 1. Train the model and save it:
 ```sh
- python src/pipeline/model_trainer.py
+ python components/model_trainer.py
 ```
 
 ### 2. Start the Flask server:
